@@ -9,7 +9,7 @@ module.exports = {
 	},
 	resolve: {
 		root: path.resolve('./src'),
-		extensions: ["", ".webpack.js", ".web.js", ".js"]
+		extensions: ["", ".webpack.js", ".web.js", ".js", ".ts"]
 	},
 	module: {
 		loaders: [
