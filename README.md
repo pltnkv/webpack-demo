@@ -10,7 +10,7 @@ _npm install_
 _webpack_
 
 
-*How to run webpack + typescript + karma in watch mode*
+*How to run webpack + typescript with sourcemaps + karma in watch mode*
 
 _$ webpack --watch_
 
