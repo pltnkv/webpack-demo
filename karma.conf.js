@@ -4,41 +4,11 @@ module.exports = function (config) {
 	config.set({
 		frameworks: ['jasmine'],
 		files: [
-			'tests/*Test.ts'
+			'out/test_entry.js'
 		],
 		reporters: ['progress'],
 		preprocessors: {
-			'tests/*Test.ts': ['webpack', 'sourcemap']
-		},
-		webpack: {
-			resolve: {
-				root: path.resolve('./src'),
-				extensions: ["", ".webpack.js", ".web.js", ".js", ".ts"]
-			},
-			module: {
-				loaders: [
-					{
-						test: /\.tsx?$/,
-						loader: 'ts-loader'
-					},
-					{
-						test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-						loader: 'file?name=[path][name].[extlf]'
-					},
-					{
-						test: /\.html$/,
-						loader: "html"
-					}
-				]
-			},
-			ts: {
-				transpileOnly: true,
-				compilerOptions: {
-					target: 'ES5',
-					sourceMap: true
-				}
-			},
-			devtool: 'source-map'
+			'out/test_entry.js': ['sourcemap']
 		},
 		port: 9876,
 		colors: false,
